@@ -164,9 +164,15 @@ nav a:hover {
     border-radius: 18px;
     box-shadow: 0 6px 18px rgba(255, 153, 51, 0.10);
     padding: 28px;
-    margin: 18px;
+    margin: 0;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .feature:hover, .service-card:hover, .contact-item:hover {
@@ -179,6 +185,51 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
     justify-items: center;
+    padding: 20px 0;
+}
+
+/* Service Card Specific Styling */
+.service-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    margin: 15px 0 10px 0;
+    color: #8B4513;
+    font-size: 1.3em;
+}
+
+.service-card p {
+    margin: 10px 0 20px 0;
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.service-card .btn-primary {
+    margin-top: auto;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Services Section Specific */
+.services {
+    padding: 40px 20px;
+    background: #fffdfa;
+    border-radius: 18px;
+    margin: 20px 0;
+    box-shadow: 0 6px 18px rgba(255, 153, 51, 0.10);
+    border: 2px solid #ffd700;
+}
+
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Mobile Hamburger Menu */
@@ -389,7 +440,14 @@ button:hover {
     /* Service Cards Mobile */
     .service-card, .feature, .contact-item {
         width: 100%;
-        margin: 10px 0;
+        max-width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
         padding: 20px;
     }
 
