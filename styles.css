@@ -175,10 +175,38 @@ nav a:hover {
 }
 
 .features-grid, .testimonial-grid, .faq-items, .service-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
+    justify-items: center;
+}
+
+/* Mobile Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .testimonials, .faq {
@@ -235,6 +263,317 @@ button:hover {
     font-size: 28px;
     margin-bottom: 12px;
     filter: drop-shadow(0 0 4px #ffecb3);
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 0.9em;
+    }
+
+    .navbar, .footer, .cta-buttons, .hero, .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .cta-buttons button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-grid, .features-grid, .testimonial-grid, .faq-items, .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .feature, .service-card, .contact-item, .contact-form, .footer-content {
+        margin: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Navigation Mobile */
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        background: rgba(255, 153, 51, 0.95);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 8px 0;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        padding: 12px;
+        border-radius: 8px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Hero Section Mobile */
+    .hero-text h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+
+    .om-symbol i {
+        font-size: 80px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-buttons button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Service Cards Mobile */
+    .service-card, .feature, .contact-item {
+        width: 100%;
+        margin: 10px 0;
+        padding: 20px;
+    }
+
+    /* Forms Mobile */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    input, select, textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px;
+    }
+
+    /* Contact Page Mobile */
+    .contact-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Footer Mobile */
+    .footer-section {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .trust-badges {
+        align-items: center;
+    }
+
+    /* Typography Mobile */
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    section {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Astrologer Page Mobile */
+    .astrologer-contact {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .astrologer-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .consultation-info {
+        text-align: center;
+    }
+
+    .consultation-options li {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.85em;
+    }
+
+    .nav-container {
+        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .om-symbol i {
+        font-size: 60px;
+    }
+
+    .cta-buttons button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .service-card, .feature, .contact-item {
+        padding: 15px;
+    }
+
+    .contact-item i {
+        font-size: 24px;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    section {
+        padding: 15px 10px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .astrologer-contact {
+        padding: 15px;
+    }
+
+    .consultation-options li {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    input, select, textarea {
+        padding: 10px;
+    }
+}
+
+/* Landscape Mobile Devices */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-content {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .cta-buttons button {
+        width: auto;
+        min-width: 150px;
+    }
+
+    .service-grid, .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Contact section in home page */
