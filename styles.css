@@ -1,0 +1,578 @@
+body {
+    font-family: 'Noto Serif', 'Hind', serif;
+    color: #4B2E05;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fffbe6 0%, #ffe0b2 100%);
+    line-height: 1.8;
+    min-height: 100vh;
+    background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+}
+
+header {
+    background: linear-gradient(90deg, #ff9933 0%, #ffd700 100%);
+    color: #fff;
+    padding: 60px 20px 40px 20px;
+    text-align: center;
+    border-bottom: 6px solid #b8860b;
+    box-shadow: 0 6px 24px rgba(255, 153, 51, 0.15);
+    position: relative;
+}
+
+header::after {
+    content: "ॐ";
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 60px;
+    color: #fff8e1;
+    opacity: 0.2;
+    font-family: 'Noto Serif', serif;
+    pointer-events: none;
+}
+
+header h1, header h2, header h3 {
+    text-align: center;
+}
+
+.cta-buttons button {
+    background: linear-gradient(90deg, #ffd700 60%, #ff9933 100%);
+    border: none;
+    color: #8B4513;
+    padding: 14px 32px;
+    margin: 12px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 24px rgba(255, 153, 51, 0.15);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    outline: 2px solid #fff3cd;
+}
+
+.cta-buttons button:hover {
+    background: linear-gradient(90deg, #ffb300 60%, #ff9933 100%);
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(255, 153, 51, 0.25);
+}
+
+main {
+    padding: 70px 20px;
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255, 251, 230, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(255, 153, 51, 0.08);
+}
+
+section {
+    margin-bottom: 48px;
+    padding: 28px;
+    background: #fffdfa;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(255, 153, 51, 0.10);
+    border: 2px solid #ffd700;
+    position: relative;
+}
+
+section::before {
+    content: "🪔";
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    font-size: 28px;
+    opacity: 0.18;
+}
+
+nav {
+    background: linear-gradient(90deg, #ff9933 0%, #b8860b 100%);
+    color: #fff1e6;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 3px 16px rgba(255, 153, 51, 0.12);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 32px;
+}
+
+nav a {
+    color: #fffbe6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background: #fff3cd;
+    color: #b8860b;
+}
+
+.footer {
+    background: linear-gradient(90deg, #ff9933 0%, #ffd700 100%);
+    color: #fff;
+    text-align: center;
+    padding: 48px 0 32px 0;
+    border-top: 6px solid #b8860b;
+    margin-top: 48px;
+    box-shadow: 0 -6px 24px rgba(255, 153, 51, 0.10);
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.footer::before {
+    content: "🕉️";
+    position: absolute;
+    left: 30px;
+    top: 18px;
+    font-size: 40px;
+    opacity: 0.18;
+}
+
+.highlight, .hilighted, .highlighted, .important, .center-text {
+    text-align: center !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature, .service-card, .contact-item {
+    background: #fffdfa;
+    border: 2px solid #ffd700;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(255, 153, 51, 0.10);
+    padding: 28px;
+    margin: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.feature:hover, .service-card:hover, .contact-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(255, 153, 51, 0.18);
+}
+
+.features-grid, .testimonial-grid, .faq-items, .service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.testimonials, .faq {
+    padding: 56px 36px;
+    background: #fffbe6;
+    border-radius: 18px;
+    margin: 48px 0;
+    box-shadow: 0 6px 18px rgba(255, 153, 51, 0.10);
+    border: 2px solid #ffd700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: #fffdfa;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(255, 153, 51, 0.08);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #ffd700;
+    border-radius: 7px;
+    margin-top: 7px;
+    font-size: 1em;
+    background: #fffbe6;
+}
+
+button {
+    background: linear-gradient(90deg, #ff9933 0%, #ffd700 100%);
+    color: #fff;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.05em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ffd700 0%, #ff9933 100%);
+    transform: scale(1.04);
+}
+
+.contact-item i, .social-links i {
+    color: #ffd700;
+    font-size: 28px;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 4px #ffecb3);
+}
+
+/* Contact section in home page */
+#contact .contact-item h3 {
+    color: #8B4513;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+#contact .contact-item p {
+    color: #4B2E05;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+#contact .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Additional styles for better appearance */
+h1, h2, h3, h4, .section-title, .category-title {
+    text-align: center;
+    color: #8B4513;
+    margin-bottom: 15px;
+}
+
+.section-subtitle, .category-subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.hero-text {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #8B4513;
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.om-symbol {
+    text-align: center;
+    padding: 40px;
+}
+
+.om-symbol i {
+    font-size: 120px;
+    color: #ffd700;
+    text-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.cta-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(90deg, #ff9933 0%, #ffd700 100%);
+    color: #fff;
+    padding: 40px 0 20px 0;
+    border-top: 6px solid #b8860b;
+    margin-top: 48px;
+    box-shadow: 0 -6px 24px rgba(255, 153, 51, 0.10);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff8e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffd700;
+}
+
+.footer-section .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section .logo i {
+    margin-right: 10px;
+    color: #ffd700;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    color: #ffd700;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #fff8e1;
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+.trust-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trust-badges span {
+    color: #fff8e1;
+    font-size: 0.9em;
+}
+
+.trust-badges i {
+    margin-right: 8px;
+    color: #ffd700;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff8e1;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+/* Astrologer Page Specific Styles */
+.astrologer-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #fffdfa;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(255, 153, 51, 0.15);
+    border: 2px solid #ffd700;
+}
+
+.astrologer-image {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.astrologer-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(255, 153, 51, 0.2);
+}
+
+.consultation-info {
+    flex: 1;
+    text-align: left;
+}
+
+.consultation-options {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.consultation-options li {
+    background: #fffbe6;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ffd700;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #8B4513;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff9933 0%, #ffd700 100%);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #ffd700 0%, #ff9933 100%);
+    transform: translateY(-2px);
+}
+
+/* Contact Page Specific Styles */
+.contact-content {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    background: #fffdfa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(255, 153, 51, 0.15);
+    border: 2px solid #ffd700;
+}
+
+.contact-item a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #ff9933;
+}
+
+@media (max-width: 768px) {
+    .astrologer-contact {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .astrologer-image {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .consultation-info {
+        text-align: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin: 15px 0;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
